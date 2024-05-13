@@ -26,4 +26,5 @@ _2022.3.21f1_
 - `Assets/Scenes/POC Scene`: Main Scene
 - ~~`Assets/Scenes/Main VR Scene`: Deprecated, Main Scene for logic testing~~
 - ~~`Assets/Scenes/SampleScene`: Deprecated, created by Unity by default~~
-- `Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoScene`: Useful demo scene
+- `Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoScene`: Useful demo scene for XR hands interaction
+- `Assets/Vefects/Free Fire VFX URP/Scene/Scenes/VFX_Scene_Overview`: Useful demo scene for fire effect
