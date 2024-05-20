@@ -22,6 +22,7 @@ Library: C:\Users\ECTest\Projects\VR Battery Test\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Unity.RenderPipeline.Universal.ShaderLibrary;
 --assembly-defines=Unity.RenderPipelines.Core.Runtime;
 --assembly-defines=Unity.RenderPipelines.Universal.Runtime;
+--assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.Hands;
 --assembly-defines=Unity.XR.Hands.Samples.VisualizerSample;
@@ -144,6 +145,7 @@ Library: C:\Users\ECTest\Projects\VR Battery Test\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Unity.RenderPipeline.Universal.ShaderLibrary;
 --assembly-defines=Unity.RenderPipelines.Core.Runtime;
 --assembly-defines=Unity.RenderPipelines.Universal.Runtime;
+--assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.Hands;
 --assembly-defines=Unity.XR.Hands.Samples.VisualizerSample;

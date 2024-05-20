@@ -6,8 +6,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class BatteryInteractionController : MonoBehaviour
 {
     public GameObject ChamberPlatform;
-    public Material GrabbedMaterial;
-    public Material SuccessMaterial;
+    // public Material GrabbedMaterial;
+    // public Material SuccessMaterial;
+    public GameObject Guidance;
     public double MinYPosition = 0.5;
 
     private Material DefaultMaterial;
@@ -25,8 +26,8 @@ public class BatteryInteractionController : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
         Renderer = GetComponent<Renderer>();
         DefaultMaterial = Renderer.material;
-        if (GrabbedMaterial == null) GrabbedMaterial = DefaultMaterial;
-        if (SuccessMaterial == null) SuccessMaterial = DefaultMaterial;
+        // if (GrabbedMaterial == null) GrabbedMaterial = DefaultMaterial;
+        // if (SuccessMaterial == null) SuccessMaterial = DefaultMaterial;
     }
 
     private void Update()
@@ -54,6 +55,7 @@ public class BatteryInteractionController : MonoBehaviour
     public void OnGrabSelectEnter(SelectEnterEventArgs _)
     {
         IsGrabbing = true;
+        Guidance.SetActive(false);
     }
 
     public void OnGrabSelectExit(SelectExitEventArgs _)
@@ -71,24 +73,26 @@ public class BatteryInteractionController : MonoBehaviour
 
             Rigidbody.velocity = Vector3.zero;
             Rigidbody.angularVelocity = Vector3.zero;
+
+            Guidance.SetActive(true);
         }
 
     }
 
     private void SetMaterial()
     {
-        if (IsOnPlatform)
-        {
-            Renderer.material = SuccessMaterial;
-        }
-        else if (IsGrabbing)
-        {
-            Renderer.material = GrabbedMaterial;
-        }
-        else
-        {
-            Renderer.material = DefaultMaterial;
-        }
+        //if (IsOnPlatform)
+        //{
+        //    Renderer.material = SuccessMaterial;
+        //}
+        //else if (IsGrabbing)
+        //{
+        //    Renderer.material = GrabbedMaterial;
+        //}
+        //else
+        //{
+        //    Renderer.material = DefaultMaterial;
+        //}
     }
 
 }
