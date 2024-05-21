@@ -23,18 +23,13 @@ public class GuidanceController : MonoBehaviour
         /** TODO to be done*/
 
         var playerTransform = CameraOffset.GetComponent<Transform>();
-        var guidanceTransform = this.GetComponent<Transform>();
+        var guidanceTransform = this.GetComponent<RectTransform>();
 
         var playerPosition = playerTransform.position;
         var guidancePosition = guidanceTransform.position;
 
-        Debug.Log($"player: {playerPosition.x}, {playerPosition.y}, {playerPosition.z}");
-        Debug.Log($"guidance: {guidancePosition.x}, {guidancePosition.y}, {guidancePosition.z}");
+        var lookAt = new Vector3(playerPosition.x, guidancePosition.y, playerPosition.z);
 
-        var direction = guidanceTransform.position - playerTransform.position;
-        direction.y = 0f;
-
-        Debug.Log($"direction: {direction.x}, {direction.y}, {direction.z}");
-        guidanceTransform.rotation = Quaternion.Euler(direction);
+        guidanceTransform.LookAt(lookAt);
     }
 }
